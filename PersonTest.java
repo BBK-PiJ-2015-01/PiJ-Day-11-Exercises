@@ -6,11 +6,11 @@ import java.lang.*;
 
 public class PersonTest {
 
-	private Person instance;
+	private PersonEx3 instance;
 	
 	@Before
 	public void init() {
-		instance = new Person();
+		instance = new PersonEx3();
 	}
 	
 	@Test

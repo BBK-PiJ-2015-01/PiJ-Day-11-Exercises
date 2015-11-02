@@ -1,13 +1,21 @@
-public class Person {
+/**
+ * A person is defined by movement (as opposed to plants) and by speech (as
+ * opposed to animals).
+ */
+public interface Person {
 
-public String getInitials(String fullName) {
+    /**
+     * Move a distance in a straight line, given in meters.
+     *
+     * @param distance
+     */
+    void move(int distance);
 
-	String result = "";
-	String[] words = fullName.split("\\s*");
-	for (int i = 0; i < words.length; i++) {
-		String nextInitial = "" + words[i].charAt(0);
-		result = result + nextInitial.toUpperCase();
-	}
-	return result;
-	}
+    /**
+     * Say something, printing it on screen. It may or may not be a perfect
+     * transcription.
+     *
+     * @param message
+     */
+    void say(String message);
 }
